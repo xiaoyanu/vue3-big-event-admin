@@ -1,6 +1,7 @@
 # vue3-big-event-admin
 
-This template should help get you started developing with Vue 3 in Vite.
+这是一个用Vue3写的大事件管理系统的学习Demo
+当前还未完善，正在逐步学习更新
 
 ## Recommended IDE Setup
 
