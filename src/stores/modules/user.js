@@ -1,3 +1,4 @@
+import { userGetInfoService } from '@/api/user'
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
 
@@ -13,10 +14,22 @@ export const userUserStore = defineStore(
       token.value = ''
     }
 
+    const user = ref({})
+    const getUser = async () => {
+      const res = await userGetInfoService()
+      user.value = res.data.data
+    }
+    const setUser = (obj) => {
+      user.value = obj
+    }
+
     return {
       token,
       setToken,
       removeToken,
+      getUser,
+      user,
+      setUser,
     }
   },
   {
