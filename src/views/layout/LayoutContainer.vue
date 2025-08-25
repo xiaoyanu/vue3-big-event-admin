@@ -82,7 +82,7 @@ const handleCommand = async (key) => {
         </div>
         <el-dropdown @command="handleCommand" placement="bottom-end">
           <span class="el-dropdown__box">
-            <el-avatar :src="userStore.user.user_pic || 'https://zxz.ee/'" />
+            <el-avatar :src="userStore.user.user_pic || 'https://zxz.ee/touxiang.png'" />
             <el-icon><CaretBottom /></el-icon>
           </span>
           <template #dropdown>
