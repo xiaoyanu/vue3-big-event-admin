@@ -2,11 +2,11 @@
 import { User, Lock } from '@element-plus/icons-vue'
 import { ref, watch } from 'vue'
 import { userLoginService, userRegisterService } from '@/api/user'
-import { userUserStore } from '@/stores'
+import { useUserStore } from '@/stores'
 import router from '@/router'
 const isRegister = ref(false)
 const form = ref()
-const userStore = userUserStore()
+const userStore = useUserStore()
 
 // 用于提交的form对象
 const formModel = ref({

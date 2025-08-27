@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { userUserStore } from '@/stores/index'
+import { useUserStore } from '@/stores/index'
 import { ElMessage } from 'element-plus'
 import router from '@/router'
 
@@ -15,7 +15,7 @@ const instance = axios.create({
 instance.interceptors.request.use(
   (config) => {
     // TODO 2. 携带token
-    const userStore = userUserStore()
+    const userStore = useUserStore()
     if (userStore.token) {
       config.headers.Authorization = userStore.token
     }

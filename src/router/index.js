@@ -1,4 +1,4 @@
-import { userUserStore } from '@/stores'
+import { useUserStore } from '@/stores'
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
@@ -44,7 +44,7 @@ const router = createRouter({
 
 // 登录拦截
 router.beforeEach((to) => {
-  if (userUserStore().token == '' && to.path !== '/login') {
+  if (useUserStore().token == '' && to.path !== '/login') {
     console.log(router)
     return '/login'
   }

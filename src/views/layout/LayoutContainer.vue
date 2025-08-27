@@ -10,9 +10,9 @@ import {
   CaretBottom,
 } from '@element-plus/icons-vue'
 import { onMounted } from 'vue'
-import { userUserStore } from '@/stores'
+import { useUserStore } from '@/stores'
 import { useRouter } from 'vue-router'
-const userStore = userUserStore()
+const userStore = useUserStore()
 const router = useRouter()
 onMounted(() => {
   userStore.getUser()
